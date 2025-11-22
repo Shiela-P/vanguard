@@ -1,8 +1,8 @@
-/* CSS BY YOUR NAME */
+/* CSS BY Shiela Peters */
 
 /* IMPORTED FONTS*/
-/* IMPORT "INTER" FROM GOOGLE FONTS"
-
+/* IMPORT "INTER" FROM GOOGLE FONTS" */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
@@ -63,7 +63,220 @@ table {
 }
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
+/* Mobile menu styles */
+nav{
+    background-color: var(--black);
+}
 
+nav ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    text-align: center;
+    max-height: 0;
+}
+
+nav h2{
+    visibility: hidden;
+    height: 1px;
+}
+
+nav li a{
+    display: block;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    transition: background-color .3s ease-in;
+}
+
+nav a:hover, nav input:hover{
+    background-color: var(--blue);
+}
+
+nav label{
+    cursor: pointer;
+    display: inline-block;
+    padding: 1.5rem;
+    user-select: none;
+}
+
+label span{
+    background-color: white;
+    display: block;
+    height: .25rem;
+    position: relative;
+    transition: background-color .3s ease-out;
+    width: 2rem;
+}
+
+label span:before, label span:after{
+    background:white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+label span:before{
+    top: .75rem;
+}
+
+label span:after{
+    top: -.75rem;
+}
+
+header input{
+    display:none;
+}
+
+input:checked ~ ul{
+    max-height: 500px;
+}
+
+input:checked ~ label span {
+    background: transparent;
+}
+
+input:checked ~ label span:before{
+    transform: rotate(-45deg);
+}
+
+input:checked ~ label span:after{
+    transform: rotate(45deg);
+}
+
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+@media screen and (min-width: 600px){
+    nav ul {
+        overflow:visible;
+        position: absolute;
+        top: 1.5rem;
+        left: .5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    nav li a{
+        display: inline-block;
+    }
+    
+    label span, input{
+        display: none;
+    }
+}
+/* ------------------------------------ */
+body{
+    font-family: 'inter', Arial, Helvetica, sans-serif;
+}
+h1{
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 2rem;
+
+}
+
+header{
+    background-color: var(--black);
+}
+
+header div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+
+ .innovation h2{
+    color: var(--white);
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.innovation p{
+    color: var(--white);
+}
+
+.innovation div{
+    padding: 1rem .5rem;
+    backdrop-filter: blur(10px);
+}
+
+button{
+    background-color: var(--blue);
+    border: none;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 1rem;
+    border-radius: .5rem;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+p{
+    line-height: 1.5rem;
+}
+
+#expertise{
+    margin: 1rem;
+}
+
+.offerings{
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.offerings div{
+    background-color: var(--blue);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.offerings h3{
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 1rem;
+}
+
+#results{
+    background-color: var(--blue);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    color: var(--white)
+}
+
+h3{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+#contact{
+    background-color: var(--black);
+    color: white;
+
+}
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
@@ -73,8 +286,58 @@ table {
     margin: 0 auto;
 }
 
+table{
+    margin: 1rem auto;
+}
+
+th, td{
+    border: solid var(--charcoal) 1px;
+    padding: 1rem;
+    text-align: center;
+}
+
+th{
+    font-weight: bold;
+}
+
+tr{
+    background-color: var(--black);
+}
+
+tr:nth-child(3), tr:nth-child(5){
+    background-color: var(--charcoal);
+}
+
+input, textarea{
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    border: solid var(--blue) 3px;
+}
+
+form{
+    margin-top: 1rem;
+}
+
+input[type="submit"]{
+    border:none;
+    color: var(--white);
+    background-color: var(--blue);
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+footer{
+    text-align: center;
+    background-color: var(--black);
+    color: white;
+}
+
+
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- {
+ .innovation{
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
@@ -85,7 +348,8 @@ table {
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
+/* not sure why this doesn't work... maybe come back to it if there's time */
+ h1::before{
     content: "";
 
     left:-.5rem;
@@ -113,7 +377,7 @@ table {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition: temp;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
