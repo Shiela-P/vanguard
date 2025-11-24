@@ -172,8 +172,10 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     }
     
     label span, input{
-        display: none;
+        /* display: none; */
     }
+
+    
 }
 /* ------------------------------------ */
 body{
@@ -345,6 +347,10 @@ a{
     color: var(--blue);
 }
 
+.results-grid{
+    display: grid;
+}
+
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
  .innovation{
@@ -358,7 +364,7 @@ a{
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
- .logo{
+ h1::before{
     content: "";
     display: inline-block;
     left:-.5rem;
@@ -387,7 +393,7 @@ a{
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: temp;
+    transition: height 1s;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
@@ -416,8 +422,8 @@ a{
 
 
 /* MEDIA QUERIES (MEDIUM) */ 
-
-    #results {
+@media (min-width: 800px){
+ #results {
         grid-template-columns: 1fr 1fr;
     }
     .results-container {
@@ -431,5 +437,15 @@ a{
         width: 50%;
     }
 
+   .offerings{
+        grid-template-columns: 1fr 1fr;
+   }
+
+   .results-grid{
+        grid-template-columns: 1fr 1fr;
+   }
+
+}
+   
 
 /* MEDIA QUERIES (LARGE) */
