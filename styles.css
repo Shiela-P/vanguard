@@ -217,15 +217,16 @@ header div{
     padding: 1rem;
     font-size: 1rem;
     font-weight: bold;
-    margin: 1rem;
-    width: 15rem;
+    margin: 0 auto;
+    /* width: 15rem; */
     border-radius: .5rem;
     transition: transform 0.5s ease;
+    text-align: center;
 }
 
 .button:hover{
     background-color: var(--red);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 h2{
@@ -252,7 +253,9 @@ p{
     background-color: var(--blue);
     color: white;
     padding: 1rem;
+    top: 0;
     border-radius: 0.5rem;
+    transition: top 1s;
 }
 
 .offerings h3{
@@ -361,7 +364,23 @@ a{
     }
 }
 
-.button, .innovation h2{
+/* @keyframes hoverUp{
+    from{
+        top: 0rem;
+    }
+    to{
+        top: -0.5rem;
+    }
+} */
+
+.offerings div:hover{
+    /* animation-name: hoverUp;
+    animation-duration: 1s; */
+    position: relative;
+    top: -0.5rem;
+}
+
+.button, h2, h3{
     animation-name: fadeInDown;
     animation-duration: 2s;
     position: relative;
