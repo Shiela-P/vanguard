@@ -100,12 +100,13 @@ nav li a{
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
-    color: white;
+    color: var(--blue);
     transition: background-color .3s ease-in;
 }
 
 nav a:hover, nav input:hover{
     background-color: var(--blue);
+    color: var(--black);
 }
 
 nav label{
@@ -217,7 +218,14 @@ header div{
     font-size: 1rem;
     font-weight: bold;
     margin: 1rem;
+    width: 15rem;
     border-radius: .5rem;
+    transition: transform 0.5s ease;
+}
+
+.button:hover{
+    background-color: var(--red);
+    transform: scale(1.1);
 }
 
 h2{
