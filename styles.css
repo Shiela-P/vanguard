@@ -289,6 +289,13 @@ body{
     min-width: 400px;
 }
 
+section{
+    width: 100%;
+}
+
+section.contact{
+    background-color: var(--black);
+}
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
